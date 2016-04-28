@@ -1,1 +1,1 @@
-include ':app', ':timutil', ':rxandroiddemo'
+include ':app', ':timutil', ':rxandroiddemo', ':idaily'

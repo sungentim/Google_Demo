@@ -32,9 +32,13 @@ android {
         targetCompatibility 1.8
         sourceCompatibility 1.8
     }
+    dataBinding{
+        enabled=true
+    }
 }
 
 dependencies {
+
     def compiles = ext.compiles
     def provides = ext.provides
     def apts = ext.apts
@@ -58,6 +62,7 @@ dependencies {
     compile compiles.eventbus
     compile compiles.dagger
     compile compiles.butterknife
+    compile 'javax.annotation:jsr250-api:1.0'
 
 
     provided provides.daggerCompiler

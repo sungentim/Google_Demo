@@ -10,6 +10,7 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/daggerdemo" />
             <option value="$PROJECT_DIR$/idaily" />
             <option value="$PROJECT_DIR$/rxandroiddemo" />
             <option value="$PROJECT_DIR$/timutil" />
@@ -19,6 +20,7 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/daggerdemo" />
             <option value="$PROJECT_DIR$/idaily" />
             <option value="$PROJECT_DIR$/rxandroiddemo" />
             <option value="$PROJECT_DIR$/timutil" />

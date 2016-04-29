@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
 import com.tim.daggerdemo.module.ActivityModule;
+import com.tim.daggerdemo.module.ShoppingCartModel;
 import com.tim.daggerdemo.module.UserModule;
 
 import javax.inject.Inject;
@@ -16,8 +17,9 @@ public class MainActivity extends AppCompatActivity {
     @Bind(R.id.text)
     TextView mText;
     private ActivityComponent component;
+    private ContainerComponent containerComponent;
     @Inject
-    UserModule userModule;
+    ShoppingCartModel shoppingCartModel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,7 +27,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
         component = DaggerActivityComponent.builder().activityModule(new ActivityModule()).build();
-        component.inject(this);
-        mText.setText(userModule.getName());
+        containerComponent=DaggerContainerComponent.builder().activityComponent(component).build();
+        containerComponent.inject(this);
+
+        mText.setText(shoppingCartModel.getName());
     }
 }

@@ -1,6 +1,7 @@
 package com.tim.daggerdemo;
 
 import com.tim.daggerdemo.module.ActivityModule;
+import com.tim.daggerdemo.module.UserModule;
 
 import dagger.Component;
 
@@ -9,5 +10,6 @@ import dagger.Component;
  */
 @Component(modules = {ActivityModule.class})
 public interface ActivityComponent {
-    void inject(MainActivity mainActivity);
+//    void inject(MainActivity mainActivity);
+    UserModule userModule();
 }

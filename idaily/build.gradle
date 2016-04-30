@@ -32,6 +32,9 @@ android {
         targetCompatibility 1.8
         sourceCompatibility 1.8
     }
+    dataBinding{
+        enabled=true
+    }
 }
 
 dependencies {
@@ -58,7 +61,8 @@ dependencies {
     compile compiles.eventbus
     compile compiles.dagger
     compile compiles.butterknife
-
+    compile 'com.android.support:design:23.3.0'
+    compile 'me.relex:circleindicator:1.1.5@aar'
 
     provided provides.daggerCompiler
     provided provides.annotation
@@ -67,3 +71,8 @@ dependencies {
     compile project(':timutil')
 
 }
+
+
+
+
+

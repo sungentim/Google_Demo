@@ -1,1 +1,1 @@
-include ':app', ':timutil', ':rxandroiddemo', ':idaily', ':daggerdemo', ':daggerdemo'
+include ':app', ':timutil', ':rxandroiddemo', ':idaily', ':daggerdemo', ':daggerdemo', ':frescodemo'

@@ -1,11 +1,15 @@
 package com.tim.daggerdemo;
 
 import android.databinding.DataBindingUtil;
-import android.os.Build;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.liuguangqiang.support.utils.IntentUtils;
+import com.liuguangqiang.support.utils.image.BlurUtils;
 import com.tim.daggerdemo.databinding.ActivityMainBinding;
 import com.tim.daggerdemo.module.ActivityModule;
 import com.tim.daggerdemo.module.ShoppingCartModel;
@@ -19,6 +23,8 @@ import butterknife.OnClick;
 public class MainActivity extends AppCompatActivity {
     @Bind(R.id.text)
     TextView mText;
+    @Bind(R.id.rootView)
+    ImageView mRootView;
     private ActivityComponent component;
     private ContainerComponent containerComponent;
     @Inject
@@ -35,6 +41,8 @@ public class MainActivity extends AppCompatActivity {
         containerComponent.inject(this);
 
         binding.setCartModel(shoppingCartModel);
+        mRootView.setImageBitmap(BlurUtils.blur(this, BitmapFactory.decodeResource(getResources(), R.mipmap.ic_launcher)));
+
     }
 
     @OnClick(R.id.changeBtn)
